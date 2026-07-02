@@ -1,0 +1,302 @@
+/* =========================
+   Google Font
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f4f4f4;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 20px 36px;
+}
+
+.card{
+    max-width: 340px;
+    width: 100%;
+    background:#fff;
+    border-radius:20px;
+    padding: 24px;
+    border:1px solid #eceff4;
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.05),
+        0 18px 45px rgba(0,0,0,.08);
+    transition:.35s ease;
+}
+
+.header{
+    margin-bottom:28px;
+}
+
+.header h2{
+    color:#111827;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.header p{
+    color:#6b7280;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.input-box input{
+    width:100%;
+    height:52px;
+    border:2px solid #dbe4f0;
+    border-radius:14px;
+    background:#fff;
+    outline:none;
+    padding:0 50px 0 18px;
+    font-size:15px;
+    color:#111827;
+    transition:.3s;
+}
+
+.input-box input::placeholder{
+    color:transparent;
+}
+
+.input-box input:focus,
+.input-box input:not(:placeholder-shown){
+    border-color:#2563eb;
+}
+
+.input-box label{
+    position:absolute;
+    left:16px;
+    top:50%;
+    transform:translateY(-50%);
+    background:#fff;
+    padding:0 6px;
+    color:#94a3b8;
+    font-size:15px;
+    pointer-events:none;
+    transition:.25s ease;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label{
+    top:0;
+    font-size:12px;
+    color:#2563eb;
+    font-weight:600;
+}
+
+#togglePassword{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#94a3b8;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+#togglePassword:hover{
+    color:#2563eb;
+    transform:translateY(-50%) scale(1.08);
+}
+
+.input-box.active input{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+.input-box.success input{
+    border-color:#16a34a;
+}
+
+.input-box.success label{
+    color:#16a34a;
+}
+
+.input-box.error input{
+    border-color:#ef4444;
+}
+
+.input-box.error label{
+    color:#ef4444;
+}
+
+.input-box.medium input{
+    border-color:#f59e0b;
+}
+
+.medium label{
+    color:#f59e0b;
+}
+
+input,
+label,
+i,
+.card{
+    transition:.3s ease;
+}
+
+.strength-box {
+    margin-bottom: 8px;
+}
+
+.strength-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom: 5px;
+}
+
+.strength-info span:first-child {
+    font-size: 12px;
+    color:#64748b;
+    font-weight:500;
+}
+
+#strengthText {
+    font-size: 12px;
+    font-weight: 600;
+    color:#ef4444;
+    transition:.35s;
+}
+
+.progress{
+    width:100%;
+    height: 4px;
+    background:#edf2f7;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+#progressBar{
+    width:0%;
+    height:100%;
+    border-radius:30px;
+    background:#ef4444;
+    transition:.4s ease;
+}
+
+.progress.weak #progressBar{
+    width:25%;
+    background:#ef4444;
+}
+
+.progress.medium #progressBar{
+    width:65%;
+    background:#f59e0b;
+}
+
+.progress.strong #progressBar{
+    width:100%;
+    background:#22c55e;
+}
+
+.rules {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+}
+
+.rules li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 4px 0;
+    color: #94a3b8;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.rules li i{
+    color:#cbd5e1;
+    transition:.3s;
+}
+
+.rules li.valid{
+    color:#16a34a;
+}
+
+.rules li.valid i{
+    color:#16a34a;
+}
+
+.rules li.invalid{
+    color:#ef4444;
+}
+
+.rules li.invalid i{
+    color:#ef4444;
+}
+
+.input-box.error input:focus + label,
+.input-box.error input:not(:placeholder-shown) + label{
+    color: #ef4444;
+}
+
+.input-box.medium input:focus + label,
+.input-box.medium input:not(:placeholder-shown) + label{
+    color:#f59e0b;
+}
+
+.input-box.success input:focus + label,
+.input-box.success input:not(:placeholder-shown) + label{
+    color:#16a34a;
+}
+
+.input-box.error #togglePassword:hover {
+    color: #ef4444;
+}
+.input-box.success #togglePassword:hover {
+    color: #16a34a;
+}
+
+.input-box.medium #togglePassword:hover {
+    color: #f59e0b;
+}
+
+.card{
+    animation:fadeUp .5s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:480px){
+    .card{
+        width:100%;
+        padding:24px;
+
+    }
+    .header h2{
+
+        font-size:22px;
+
+    }
+    .header p{
+
+        font-size:13px;
+
+    }
+}
